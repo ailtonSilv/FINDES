@@ -1,0 +1,147 @@
+* {  
+font-family: Segoe UI,Tahoma,Arial;
+font-size: 14px ;
+color: #505050;
+}  
+body{
+    text-align: center;
+}
+.div_padrao{
+    margin: 0 auto;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* INÍCIO VALORES(HEADER)*/
+.div_padrao .header_item{
+    margin-top: 50px;
+}
+.header_item{
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #9F9F9F;
+    padding: 5px;
+    width: 235px;
+}
+.header_item h5{
+    margin: 5px;
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.header_item p{
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+/* FIM VALORES(HEADER)*/
+
+/* INÍCIO TABELA*/
+table{
+    display: inline-table;
+    text-align: center;
+    border-collapse:collapse;
+    border: 1px solid #BFC5C6;
+    width: 1000px;
+}
+.div_padrao table{
+max-width: 1000px;
+}
+tbody  
+{  
+color: #656565;
+padding: 2px;
+border: 1px solid #BFC5C6;
+}  
+th
+{  
+background-color: #F3F3F3;
+padding: 2px 10px;
+font-weight: 600;
+height: 40px;
+} 
+th:not(:last-of-type)  
+{  
+border-right: 1px solid #9F9F9F;
+}
+tr :nth-child(2){
+    width: 200px;
+} 
+tr{
+    border-bottom: 1px solid #9F9F9F;
+}
+td{
+    font-weight: 0;
+    height: 40px; 
+    max-width: 40;
+}
+tbody tr:hover{
+    background: #e7f2ff;
+}
+td input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    text-align: center;
+}
+
+/* FIM TABELA*/
+
+/* INÍCIO BOTÕES */
+.botao {
+    padding: 10px 20px 10px 20px; 
+    width: 200px;
+    border: 1px solid #BFC5C6;
+    background: #ffffff;
+    outline: none;
+    text-transform: uppercase;
+    text-align: center; 
+    font-weight: bold;
+    color:#656565;
+    cursor: pointer;
+    margin: 50px 20px;
+}
+.botao:hover{
+    background: #656565;
+    color: #ffffff;
+    border: none;
+}
+#enviar:hover{
+    background: #499dfd;
+}
+#cancelar:hover{
+    background: #ff4949;
+}
+/* FIM BOTÕES */
+
+/* ALERT MSG */
+#page_msg{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 1000px;
+    height: 20px;
+}
+#page_msg p{
+    margin: 0px;
+    padding: 2px;
+    font-weight: 700;
+    border-radius: 2px;
+}
+.success{
+    background-color: seagreen;
+    color: white;
+}
+.danger{
+    background-color: #ff4949;
+    color: white;
+}
+.warning{
+    background-color: gold;    
+    color: #505050;
+}
+.info{
+    background-color: #499dfd;
+    color: white;
+}
+/* FIM ALERT MSG */

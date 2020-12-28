@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+    <title>Informações de Desconto</title>
+
+    <script type="text/javascript" src="ClientGlobalContext.js.aspx"></script>
+    <script type="text/javascript" src="findes_/Scripts/js_quote_discount_page.js"></script>
+    <link rel="stylesheet" type="text/css" href="findes_/Styles/css_quote_discount_page.css">
+
+    <meta charset="utf-8">
+</head>
+
+<body style="overflow-wrap: break-word;" onfocusout="parent.setEmailRange();">
+
+    <div class="div_padrao">
+        <div class="header_item" id="botao_total_proposta">
+            <h5 id="TotalProposta">R$ </h5>
+            <p>Total da Proposta</p>
+        </div>
+        <div class="header_item" id="botao_desconto_permitido">
+            <h5 id="DescontoPermitido">R$ </h5>
+            <p>Desconto Permitido</p>
+        </div>
+        <div class="header_item" id="botao_desconto_aplicado">
+            <h5 id="DescontoAplicado">R$ </h5>
+            <p>Desconto Total Aplicado</p>
+        </div>
+    </div>
+
+    <div class="div_padrao">
+        <table id="tabelaProdutos">
+            <thead id="headTable">
+                <tr>
+                    <th>Sequencia</th>
+                    <th>Item</th>
+                    <th>Valor Atual (R$)</th>
+                    <th>Margem (%)</th>
+                    <th>Valor Desconto (R$)</th>
+                    <th>Valor Final (R$)</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTable"></tbody>
+            <tfoot id="footTable"></tfoot>
+        </table>
+        <div id="error_msg"></div>
+        <br>
+        <!--
+            <button class="botao" id="cancelar" onclick="closeWindow()">Fechar</button>
+        -->
+        <button class="botao" id="enviar" onclick="confirmDiscount()">Salvar</button>
+    </div>
+</body>
+</html>

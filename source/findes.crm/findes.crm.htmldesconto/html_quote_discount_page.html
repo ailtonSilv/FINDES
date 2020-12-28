@@ -1,0 +1,59 @@
+﻿<html>
+<head>
+    <title>Informações de Desconto</title>
+
+    <script type="text/javascript" src="ClientGlobalContext.js.aspx"></script>
+    <script type="text/javascript" src="findes_/Scripts/js_quote_discount_page.js"></script>
+    <link rel="stylesheet" type="text/css" href="findes_/Styles/css_quote_discount_page.css">
+
+    <meta charset="utf-8">
+    <meta>
+</head>
+
+<body style="overflow-wrap: break-word;" onfocusout="parent.setEmailRange();">
+
+    <div class="div_padrao" style="font-family: undefined;">
+        <div class="header_item" id="botao_vl_original_proposta">
+            <p>Valor Original da Proposta</p>
+            <h5 id="ValorOriginalProposta">R$ </h5>
+        </div>
+        <div class="header_item" id="botao_total_proposta">
+            <p>Valor Final da Proposta</p>
+            <h5 id="TotalProposta">R$ </h5>
+        </div>
+        <div class="header_item" id="botao_desconto_permitido">
+            <p>Desconto Permitido</p>
+            <h5 id="DescontoPermitido">R$ </h5>
+        </div>
+        <div class="header_item" id="botao_desconto_aplicado">
+            <p>Desconto Total Solicitado</p>
+            <h5 id="DescontoAplicado">R$ </h5>
+        </div>
+    </div>
+
+    <div id="page_msg" style="font-family: undefined;"></div>
+
+    <div class="div_padrao" style="font-family: undefined;">
+        <table id="tabelaProdutos">
+            <thead id="headTable">
+                <tr>
+                    <th>Sequencia</th>
+                    <th>Item</th>
+                    <th>Valor Original (R$)</th>
+                    <th>Reinvestimento (%)</th>
+                    <th>Desconto (%)</th>
+                    <th>Valor Desconto (R$)</th>
+                    <th>Desconto Total Aplicado (R$)</th>
+                    <th>Valor Final (R$)</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTable"></tbody>
+            <tfoot id="footTable"></tfoot>
+        </table>
+        <div id="error_msg"></div>
+        <br>
+        <button class="botao" id="cancelar" onclick="closeWindow();">Cancelar</button>
+        <button class="botao" id="enviar" onclick="confirmDiscount()">Salvar e Enviar</button>
+    </div>
+</body>
+</html>

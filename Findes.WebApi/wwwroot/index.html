@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Client Validação</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <style>
+        input[type='submit'], button, [aria-label] {
+            cursor: pointer;
+        }
+
+        input[type=text], select{
+            border: 1px solid #000000;
+        }
+
+        #spoiler {
+            display: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            font-family: Arial, sans-serif;
+            border: 1px solid #808080;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #414141;
+            color: white;
+            padding: 4px;
+            font-weight:normal;
+            font: lighter;
+        }
+
+        td {
+            border: 1px solid;
+            padding: 5px;
+        }
+
+        .b {
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>    
+    <div class="limiter">
+        <div class="container-table100" style="justify-content: center;">
+            <h2>CRM Nacional Web service Padrão REST</h2>
+            <table border="0" style="padding30px; border:1px solid; width: 70%;">
+                <tr>
+                    <td width="50%">
+                        <form action="javascript:void(0);" method="POST" onsubmit="GetData($('#layout').val())" style="padding:5px;">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="layout">Layout a ser solicitado:</label>
+                                </div>
+                                <div class="col-4">
+                                    <select id="layout" name="layout" style="padding:5px;">
+                                        <option value="contas">Contas</option>
+                                        <option value="contatos">Contatos</option>
+                                        <option value="oportunidades">Oportunidades</option>
+                                        <option value="produtoOportunidades">Produto Oportunidades</option>
+                                        <option value="propostas">Propostas</option>
+                                        <option value="produtoPropostas">Produto Propostas</option>
+                                        <option value="contratos">Contratos</option>
+                                        <option value="produtoContratos">Produto Contratos</option>
+                                        <option value="ocorrencias">Ocorrências</option>
+                                        <option value="produtos">Produtos</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label for="qtde">Qtde Registros (1-5000):</label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" id="qtde" min="1" max="5000" style="padding:5px;" value="5000">
+                                </div>
+                                <div class="col-6">
+                                    <label for="pagina">Página (1-...):</label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" id="pagina" min="0" max="5000" style="padding:5px;" value="0">
+                                </div>
+
+                                <div class="col-6">
+                                    <label for="data">Data Inicial:</label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="text" id="data" style="padding:5px;">
+                                </div>
+
+                                <div class="col-6">
+                                    <input type="submit" value="Buscar">
+                                </div>
+                                <input type="hidden" id="token" value="DNHMGFINDES001">
+                        </form>
+                            <div class="col-4">
+                                <select id="tableLayout" name="tableLayout" style="padding:5px;">
+                                    <option value="ver1">Table Layout 1</option>
+                                    <option value="ver2">Table Layout 2</option>
+                                    <option value="ver3">Table Layout 3</option>
+                                    <option value="ver4">Table Layout 4</option>
+                                    <option value="ver5">Table Layout 5</option>
+                                    <option value="ver6">Table Layout 6</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </td>
+                    <td width="50%">
+                        <!--<textarea id="console" rows="20" wrap="soft" style="width:100%"></textarea>-->
+                        Mensagem de retorno: <span class="b" id="message"></span><br />
+                        <div id="text" style="display:none;">
+                            Primeira página: <span class="b" id="first"></span><br />
+                            Última página: <span class="b" id="last"></span><br />
+                            Qtde de registros retornados: <span class="b" id="numberOfElements"></span><br />
+                            Número da página: <span class="b" id="number"></span><br />
+                            Qtde de registros por página: <span class="b" id="size"></span><br />
+                            Total de páginas: <span class="b" id="totalPages"></span><br />
+                            Total de registros: <span class="b" id="totalElements"></span><br />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div  class="limiter">
+        <div class="container-table100">
+                        <div class="wrap-table100">
+                <div id="div1" class="table100 ver1 m-b-110"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <script language="javascript" type="text/javascript">
+        function data() {
+            today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1;
+
+            var yyyy = today.getFullYear();
+            if (dd < 10) {
+                dd = '0' + dd;
+            }
+            if (mm < 10) {
+                mm = '0' + mm;
+            }
+            var today = '01/' + mm + '/' + yyyy;
+            $("#data").val(today);
+        }
+
+        function Modelo() {
+            var url = '/api/nacional';
+            var recurso = '/contas';
+            var params = {
+                pageSize: 500
+                , pageNumber: 1
+                , dataModificacao: '29/05/2017'
+            };
+            var config = {
+                method: 'GET',
+                url: url + recurso,
+                data: params,
+                headers: {
+                    'Authorization': 'DNHMGFINDES001'
+                    , 'Content-type': 'application/x-www-form-urlencoded'
+                }
+            };
+            $.ajax(config).done(function (response) {
+                console.log(response);
+            });
+        }
+
+        function GetData(layout) {
+            var url = "/api/nacional";
+            var recurso = "";
+
+            var params = {
+                pageSize: $('#qtde').val()
+                , pageNumber: $('#pagina').val()
+                , dataModificacao: $('#data').val()
+                //, layout: layout
+            };
+
+            recurso = "/" + layout;
+
+            if (recurso != "") {
+                clean();
+                $("#message").text("loading...");
+                $("#table1").remove();
+                $.ajax({
+                    type: "GET",
+                    accepts: "application/json",
+                    url: url + recurso,
+                    contentType: "application/x-www-form-urlencoded",
+                    beforeSend: function (request) {
+                        request.setRequestHeader("Authorization", $("#token").val());
+                    },
+                    //data: JSON.stringify(params),
+                    data: params,
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert("Something went wrong!");
+                    },
+                    success: function (result) {
+                        
+                        if (result.sucesso != null && result.sucesso == false) {
+                            $("#message").text(result.mensagem);
+                        } else {
+                            $("#message").text('');
+                            $("#first").text(result.first);
+                            $("#last").text(result.last);
+                            $("#number").text(result.number);
+                            $("#numberOfElements").text(result.numberOfElements);
+                            $("#size").text(result.size);
+                            $("#totalElements").text(result.totalElements);
+                            $("#totalPages").text(result.totalPages);
+                            $("#text").show();
+                        }
+
+                        drawTable(result.content);
+                        changeLayout();
+                    }
+                });
+            }
+        }
+
+        function clean() {
+            qtdeLinha = 0;
+            $("#message").text('');
+            $("#first").text('');
+            $("#last").text('');
+            $("#number").text('');
+            $("#numberOfElements").text('');
+            $("#size").text('');
+            $("#totalElements").text('');
+            $("#totalPages").text('');
+            $("#text").hide();
+        }
+
+        function drawTable(data) {
+            $("#div1").append("<table id='table1' data-vertable='ver2'></table>");
+            for (var i = 0; i < data.length; i++) {
+                if (i == 0) { drawHeader(data[i]); }
+                drawRow(data[i]);
+            }
+        }
+        var qtdeLinha = 0;
+        function drawRow(rowData) {
+            var row = $("<tr class='row100 head' />");
+            $("#table1").append(row);
+            qtdeLinha++;
+            row.append("<td>" + qtdeLinha + "</td>");
+            var i = 0;
+            for (var name in rowData) {
+                if (name != undefined && name != null) {
+                    i++;
+                    row.append("<td class='column100 column" + i + "' data-column='column" + i + "'>" + rowData[name] + "</td>");
+                }
+            }
+        }
+
+        $("#tableLayout").change(function () {
+            changeLayout();
+        });
+
+        function changeLayout() {
+            var layout = $("#tableLayout").val();
+            $('#table1').attr("data-vertable", layout);
+            $('#div1').removeClass("ver1").removeClass("ver2").removeClass("ver3").removeClass("ver4").removeClass("ver5").removeClass("ver6").addClass(layout);
+        }
+
+        
+        function drawHeader(rowData) {
+            var row = $("<thead />");
+            $("#table1").append(row);
+            row.append("<tr class='row100 head' />");
+            row.append("<th>N</th>");
+            var i = 0;
+            for (var name in rowData) {
+                if (name != undefined && name != null) {
+                    i++;
+                    row.append("<th class='column100 column" + i + "' data-column='column" + i + "'>" + name + "</td>");
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            data();
+            clean();
+        });
+    </script>
+</body>
+</html>

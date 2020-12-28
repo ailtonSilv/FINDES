@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findes.crm.plugins", "findes.crm.plugins\findes.crm.plugins.csproj", "{ABD0DF6D-288A-4AD9-B042-952F46B0C0AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findes.crm.tests", "findes.crm.tests\findes.crm.tests.csproj", "{769BDDAB-4F4E-4F9D-AA07-68E5CB5D8079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findes.crm.javascript", "findes.crm.javascript\findes.crm.javascript.csproj", "{647CABCB-3769-4DC0-91B7-C82D2D9B56D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findes.crm.workflow", "findes.crm.workflow\findes.crm.workflow.csproj", "{3E10B110-98B1-41F9-901C-1AC7D5D179CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findes.crm.htmldesconto", "findes.crm.htmldesconto\findes.crm.htmldesconto.csproj", "{424CEAD0-B2B4-4884-824A-AD470A539446}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xml Integracao Legado 2 CRM", "Xml Integracao Legado 2 CRM", "{7468EDEC-02EB-433E-8F98-7C0E7D4325EA}"
+	ProjectSection(SolutionItems) = preProject
+		FromToConfig.xml = FromToConfig.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD0DF6D-288A-4AD9-B042-952F46B0C0AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD0DF6D-288A-4AD9-B042-952F46B0C0AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD0DF6D-288A-4AD9-B042-952F46B0C0AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD0DF6D-288A-4AD9-B042-952F46B0C0AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{769BDDAB-4F4E-4F9D-AA07-68E5CB5D8079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{769BDDAB-4F4E-4F9D-AA07-68E5CB5D8079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{769BDDAB-4F4E-4F9D-AA07-68E5CB5D8079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{769BDDAB-4F4E-4F9D-AA07-68E5CB5D8079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{647CABCB-3769-4DC0-91B7-C82D2D9B56D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647CABCB-3769-4DC0-91B7-C82D2D9B56D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647CABCB-3769-4DC0-91B7-C82D2D9B56D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647CABCB-3769-4DC0-91B7-C82D2D9B56D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E10B110-98B1-41F9-901C-1AC7D5D179CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E10B110-98B1-41F9-901C-1AC7D5D179CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E10B110-98B1-41F9-901C-1AC7D5D179CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E10B110-98B1-41F9-901C-1AC7D5D179CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{424CEAD0-B2B4-4884-824A-AD470A539446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{424CEAD0-B2B4-4884-824A-AD470A539446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{424CEAD0-B2B4-4884-824A-AD470A539446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{424CEAD0-B2B4-4884-824A-AD470A539446}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50C390D9-73A9-46C4-8442-CDA807185799}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ax4bvsts.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = findes.crm.tests\\findes.crm.tests.csproj
+		SccProjectName1 = findes.crm.tests
+		SccLocalPath1 = findes.crm.tests
+		SccProjectUniqueName2 = findes.crm.plugins\\findes.crm.plugins.csproj
+		SccProjectName2 = findes.crm.plugins
+		SccLocalPath2 = findes.crm.plugins
+		SccProjectUniqueName3 = findes.crm.javascript\\findes.crm.javascript.csproj
+		SccProjectName3 = findes.crm.javascript
+		SccLocalPath3 = findes.crm.javascript
+		SccProjectUniqueName4 = findes.crm.workflow\\findes.crm.workflow.csproj
+		SccProjectName4 = findes.crm.workflow
+		SccLocalPath4 = findes.crm.workflow
+		SccProjectUniqueName5 = findes.crm.htmldesconto\\findes.crm.htmldesconto.csproj
+		SccProjectName5 = findes.crm.htmldesconto
+		SccLocalPath5 = findes.crm.htmldesconto
+	EndGlobalSection
+EndGlobal

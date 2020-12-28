@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<fromto>
+  <entity crmname="findes_linhadefaturamento" crmprimarykey="findes_codigoerp" legacyname="Legado_LinhaFaturamento" legacyprimarykey="findes_codigoerp">
+    <field crmname="findes_contratoid" crmtype="lookup" crmlookupentityname="salesorder" crmsearchfield="findes_espelhopropostaid" ismultilookup="false" legacyname="findes_contratoid" />
+    <field crmname="findes_codigoerp" crmtype="string" legacyname="findes_codigoerp" />
+    <field crmname="findes_valor" crmtype="money" legacyname="findes_valor" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+  </entity>
+  <entity crmname="product" crmprimarykey="productnumber" legacyname="Legado_Product" legacyprimarykey="productnumber">
+    <field crmname="defaultuomid" crmtype="lookup" crmlookupentityname="uom" crmsearchfield="name" ismultilookup="false" legacyname="defaultuomid" />
+    <field crmname="parentproductid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="productnumber" ismultilookup="false" legacyname="parentproductid" />
+    <field crmname="findes_coligadaid" crmtype="lookup" crmlookupentityname="findes_coligada" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_coligadaid" />
+    <field crmname="defaultuomscheduleid" crmtype="lookup" crmlookupentityname="uomschedule" crmsearchfield="name" ismultilookup="false" legacyname="defaultuomscheduleid" />
+    <field crmname="description" crmtype="string" legacyname="description" />
+    <field crmname="name" crmtype="string" legacyname="name" />
+    <field crmname="productnumber" crmtype="string" legacyname="productnumber" />
+    <field crmname="findes_codigoerp" crmtype="string" legacyname="findes_codigoerp" />
+    <field crmname="quantityonhand" crmtype="decimal" legacyname="quantityonhand" />
+    <field crmname="findes_statusintegracao" crmtype="int" legacyname="findes_statusintegracao" />
+    <field crmname="findes_codigoauxiliarerp" crmtype="string" legacyname="findes_codigoauxiliarerp" />
+    <field crmname="findes_cargahoraria" crmtype="int" legacyname="findes_cargahoraria" />
+    <field crmname="producttypecode" crmtype="int" legacyname="producttypecode" />
+    <field crmname="findes_modalidade" crmtype="string" legacyname="findes_modalidade" />
+    <field crmname="findes_homologadodn" crmtype="boolean" legacyname="findes_homologadodn" />
+    <field crmname="findes_quantidademinima" crmtype="int" legacyname="findes_quantidademinima" />
+    <field crmname="findes_quantidademaxima" crmtype="int" legacyname="findes_quantidademaxima" />
+    <field crmname="findes_objetivo" crmtype="string" legacyname="findes_objetivo" />
+    <field crmname="findes_conteudoprogramatico" crmtype="string" legacyname="findes_conteudoprogramatico" />
+    <field crmname="findes_publicoalvo" crmtype="string" legacyname="findes_publicoalvo" />
+    <field crmname="findes_responsabilidadecontratante" crmtype="string" legacyname="findes_responsabilidadecontratante" />
+    <field crmname="findes_responsabilidadecontratado" crmtype="string" legacyname="findes_responsabilidadecontratado" />
+    <field crmname="findes_tipoprofissional" crmtype="int" legacyname="findes_tipoprofissional" />
+    <field crmname="findes_prerequisitos" crmtype="string" legacyname="findes_prerequisitos" />
+    <field crmname="findes_beneficios" crmtype="string" legacyname="findes_beneficios" />
+    <field crmname="findes_beneficiostrabalhadores" crmtype="string" legacyname="findes_beneficiostrabalhadores" />
+    <field crmname="findes_etapasexecucao" crmtype="string" legacyname="findes_etapasexecucao" />
+    <field crmname="findes_materialentregue" crmtype="string" legacyname="findes_materialentregue" />
+    <field crmname="findes_instalacoesfisicas" crmtype="string" legacyname="findes_instalacoesfisicas" />
+    <field crmname="findes_instraestruturarequirida" crmtype="string" legacyname="findes_instraestruturarequirida" />
+    <field crmname="findes_equipamentosnecessarios" crmtype="string" legacyname="findes_equipamentosnecessarios" />
+    <field crmname="findes_perfilprofissional" crmtype="string" legacyname="findes_perfilprofissional" />
+    <field crmname="findes_elementosdecusto" crmtype="string" legacyname="findes_elementosdecusto" />
+    <field crmname="findes_oportunidadedemelhoria" crmtype="string" legacyname="findes_oportunidadedemelhoria" />
+    <field crmname="findes_principalfraqueza" crmtype="string" legacyname="findes_principalfraqueza" />
+    <field crmname="findes_metodologia" crmtype="string" legacyname="findes_metodologia" />
+    <field crmname="findes_contornarfraqueza" crmtype="string" legacyname="findes_contornarfraqueza" />
+    <field crmname="findes_volumeminimo" crmtype="int" legacyname="findes_volumeminimo" />
+    <field crmname="findes_principaldiferencial" crmtype="string" legacyname="findes_principaldiferencial" />
+    <field crmname="quantitydecimal" crmtype="int" legacyname="quantitydecimal" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+  </entity>
+  <entity crmname="salesorder" crmprimarykey="findes_espelhopropostaid" legacyname="Legado_EspelhoProposta" legacyprimarykey="findes_espelhopropostaid">
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+    <field crmname="findes_bancoid" crmtype="lookup" crmlookupentityname="findes_banco" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_bancoid" />
+    <field crmname="customerid" crmtype="lookup" crmlookupentityname="account" crmsearchfield="findes_cnpj" ismultilookup="true" legacyname="customerid" />
+    <field crmname="findes_contaservicoid" crmtype="lookup" crmlookupentityname="account" crmsearchfield="findes_cnpj" ismultilookup="false" legacyname="findes_contaservicoid" />
+    <field crmname="findes_contatopagamentoid" crmtype="lookup" crmlookupentityname="contact" crmsearchfield="findes_cpf" ismultilookup="false" legacyname="findes_contatopagamentoid" />
+    <field crmname="modifiedby" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="modifiedby" />
+    <field crmname="findes_estadopagamentoid" crmtype="lookup" crmlookupentityname="findes_estado" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_estadopagamentoid" />
+    <field crmname="findes_municipiopagamentoid" crmtype="lookup" crmlookupentityname="findes_municipio" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_municipiopagamentoid" />
+    <field crmname="findes_espelhopropostaid" crmtype="string" legacyname="findes_espelhopropostaid" />
+    <field crmname="findes_agencia" crmtype="int" legacyname="findes_agencia" />
+    <field crmname="findes_contabancaria" crmtype="int" legacyname="findes_contabancaria" />
+    <field crmname="findes_digito" crmtype="int" legacyname="findes_digito" />
+    <field crmname="paymenttermscode" crmtype="int" legacyname="paymenttermscode" />
+    <field crmname="findes_contratobasenacional" crmtype="boolean" legacyname="findes_contratobasenacional" />
+    <field crmname="findes_codigoerp" crmtype="string" legacyname="findes_codigoerp" />
+    <field crmname="findes_iniciocontrato" crmtype="datetime" legacyname="findes_iniciocontrato" />
+    <field crmname="name" crmtype="string" legacyname="name" />
+    <field crmname="findes_quantidadeparcelas" crmtype="int" legacyname="findes_quantidadeparcelas" />
+    <field crmname="findes_quantidadefaturado" crmtype="money" legacyname="findes_quantidadefaturado" />
+    <field crmname="findes_statusfaturamento" crmtype="int" legacyname="findes_statusfaturamento" />
+    <field crmname="findes_statusexecucao" crmtype="int" legacyname="findes_statusexecucao" />
+    <field crmname="findes_terminocontrato" crmtype="datetime" legacyname="findes_terminocontrato" />
+    <field crmname="findes_tipoinstrumento" crmtype="int" legacyname="findes_tipoinstrumento" />
+    <field crmname="totalamount" crmtype="money" legacyname="totalamount" />
+    <field crmname="billto_line1" crmtype="string" legacyname="billto_line1" />
+    <field crmname="billto_line2" crmtype="string" legacyname="billto_line2" />
+    <field crmname="billto_line3" crmtype="string" legacyname="billto_line3" />
+    <field crmname="billto_postalcode" crmtype="string" legacyname="billto_postalcode" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+    <field crmname="findes_coligadaid" crmtype="lookup" crmlookupentityname="findes_coligada" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_coligadaid" />
+  </entity>
+  <entity crmname="salesorderdetail" crmprimarykey="salesorderdetailid" legacyname="Legado_ItemEspelhoProposta" legacyprimarykey="salesorderdetailid">
+    <field crmname="salesorderid" crmtype="lookup" crmlookupentityname="salesorder" crmsearchfield="findes_espelhopropostaid" ismultilookup="false" legacyname="salesorderid" />
+    <field crmname="productid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="productnumber" ismultilookup="false" legacyname="productid" />
+    <field crmname="findes_unidadefaturamentoid" crmtype="lookup" crmlookupentityname="findes_unidadedeatendimento" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_unidadefaturamentoid" />
+    <field crmname="findes_unidadeexecutoraid" crmtype="lookup" crmlookupentityname="findes_unidadedeatendimento" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_unidadeexecutoraid" />
+    <field crmname="findes_localexecucaoid" crmtype="lookup" crmlookupentityname="findes_unidadedeatendimento" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_localexecucaoid" />
+    <field crmname="findes_coligadaid" crmtype="lookup" crmlookupentityname="findes_coligada" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_coligadaid" />
+    <field crmname="findes_solucaoid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="productnumber" ismultilookup="false" legacyname="findes_solucaoid" />
+    <field crmname="findes_linhaatuacaoid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="productnumber" ismultilookup="false" legacyname="findes_linhaatuacaoid" />
+    <field crmname="findes_familiaprodutoid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="productnumber" ismultilookup="false" legacyname="findes_familiaprodutoid" />
+    <field crmname="salesorderdetailid" crmtype="uniqueidentifier" legacyname="salesorderdetailid" />
+    <field crmname="findes_categoriaid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="productnumber" ismultilookup="false" legacyname="findes_categoriaid" />
+    <field crmname="priceperunit" crmtype="money" legacyname="priceperunit" />
+    <field crmname="extendedamount" crmtype="money" legacyname="extendedamount" />
+    <field crmname="quantity" crmtype="decimal" legacyname="quantity" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+    <field crmname="findes_clienteservicoid" crmtype="lookup" crmlookupentityname="account" crmsearchfield="findes_cnpj" ismultilookup="true" legacyname="findes_clienteservicoid" />
+  </entity>
+  <entity crmname="findes_coligada" crmprimarykey="findes_codigo" legacyname="Legado_Coligada" legacyprimarykey="findes_codigo">
+    <field crmname="findes_codigo" crmtype="string" legacyname="findes_codigo" />
+    <field crmname="findes_name" crmtype="string" legacyname="findes_name" />
+    <field crmname="findes_cnpj" crmtype="string" legacyname="findes_cnpj" />
+    <field crmname="findes_inscestadual" crmtype="string" legacyname="findes_inscestadual" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+  </entity>
+  <entity crmname="findes_sindicato" crmprimarykey="findes_codigo" legacyname="Legado_Sindicato" legacyprimarykey="findes_codigo">
+    <field crmname="findes_codigo" crmtype="string" legacyname="findes_codigo" />
+    <field crmname="findes_name" crmtype="string" legacyname="findes_name" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+  </entity>
+  <entity crmname="findes_atividadeeconomica" crmprimarykey="findes_codigo" legacyname="Legado_AtividadeEconomica" legacyprimarykey="findes_codigo">
+    <field crmname="findes_atividadesecaoid" crmtype="lookup" crmlookupentityname="findes_atividadeeconomica" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_atividadesecaoid" />
+    <field crmname="findes_atividadedivisaoid" crmtype="lookup" crmlookupentityname="findes_atividadeeconomica" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_atividadedivisaoid" />
+    <field crmname="findes_atividadegrupoid" crmtype="lookup" crmlookupentityname="findes_atividadeeconomica" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_atividadegrupoid" />
+    <field crmname="findes_atividadeclasseid" crmtype="lookup" crmlookupentityname="findes_atividadeeconomica" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_atividadeclasseid" />
+    <field crmname="findes_codigo" crmtype="string" legacyname="findes_codigo" />
+    <field crmname="findes_name" crmtype="string" legacyname="findes_name" />
+    <field crmname="findes_descricao" crmtype="string" legacyname="findes_descricao" />
+    <field crmname="findes_nivelhierarquia" crmtype="int" legacyname="findes_nivelhierarquia" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+  </entity>
+  <entity crmname="findes_estado" crmprimarykey="findes_codigo" legacyname="Legado_Estado" legacyprimarykey="findes_codigo">
+    <field crmname="findes_codigo" crmtype="string" legacyname="findes_codigo" />
+    <field crmname="findes_name" crmtype="string" legacyname="findes_name" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+  </entity>
+  <entity crmname="findes_municipio" crmprimarykey="findes_codigo" legacyname="Legado_Municipio" legacyprimarykey="findes_codigo">
+    <field crmname="findes_regionalid" crmtype="lookup" crmlookupentityname="territory" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_regionalid" />
+    <field crmname="findes_name" crmtype="string" legacyname="findes_name" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+    <field crmname="findes_estadoid" crmtype="lookup" crmlookupentityname="findes_estado" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_estadoid" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+  </entity>
+  <entity crmname="contact" crmprimarykey="findes_cpf" legacyname="Legado_Contact" legacyprimarykey="findes_cpf">
+    <field crmname="parentcustomerid" crmtype="lookup" crmlookupentityname="account" crmsearchfield="findes_cnpj" ismultilookup="true" legacyname="parentcustomerid" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+    <field crmname="modifiedby" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="modifiedby" />
+    <field crmname="findes_municipioprincipalid" crmtype="lookup" crmlookupentityname="findes_municipio" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_municipioprincipalid" />
+    <field crmname="findes_municipiopagamentoid" crmtype="lookup" crmlookupentityname="findes_municipio" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_municipiopagamentoid" />
+    <field crmname="findes_estadoprincipalid" crmtype="lookup" crmlookupentityname="findes_estado" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_estadoprincipalid" />
+    <field crmname="findes_estadopagamentoid" crmtype="lookup" crmlookupentityname="findes_estado" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_estadopagamentoid" />
+    <field crmname="findes_coligadaid" crmtype="lookup" crmlookupentityname="findes_coligada" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_coligadaid" />
+    <field crmname="findes_titular" crmtype="lookup" crmlookupentityname="contact" crmsearchfield="findes_cpf" ismultilookup="false" legacyname="findes_titular" />
+    <field crmname="jobtitle" crmtype="string" legacyname="jobtitle" />
+    <field crmname="findes_cpf" crmtype="string" legacyname="findes_cpf" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+    <field crmname="description" crmtype="string" legacyname="description" />
+    <field crmname="emailaddress1" crmtype="string" legacyname="emailaddress1" />
+    <field crmname="address2_line2" crmtype="string" legacyname="address2_line2" />
+    <field crmname="address2_line2" crmtype="string" legacyname="address2_line2" />
+    <field crmname="address2_line3" crmtype="string" legacyname="address2_line3" />
+    <field crmname="address2_postalcode" crmtype="string" legacyname="address2_postalcode" />
+    <field crmname="address1_postalcode" crmtype="string" legacyname="address1_postalcode" />
+    <field crmname="address1_line2" crmtype="string" legacyname="address1_line2" />
+    <field crmname="address1_line3" crmtype="string" legacyname="address1_line3" />
+    <field crmname="address1_line1" crmtype="string" legacyname="address1_line1" />
+    <field crmname="findes_codigoerp" crmtype="string" legacyname="findes_codigoerp" />
+    <field crmname="firstname" crmtype="string" legacyname="firstname" />
+    <field crmname="lastname" crmtype="string" legacyname="lastname" />
+    <field crmname="fullname" crmtype="string" legacyname="fullname" />
+    <field crmname="statecode" crmtype="int" legacyname="statecode" />
+    <field crmname="mobilephone" crmtype="string" legacyname="mobilephone" />
+    <field crmname="telephone1" crmtype="string" legacyname="telephone1" />
+    <field crmname="telephone2" crmtype="string" legacyname="telephone2" />
+    <field crmname="findes_funcaocontato" crmtype="int" legacyname="findes_funcaocontato" />
+    <field crmname="findes_tipocontato" crmtype="int" legacyname="findes_tipocontato" />
+    <field crmname="findes_categoriacontato" crmtype="int" legacyname="findes_categoriacontato" />
+    <field crmname="findes_rg" crmtype="string" legacyname="findes_rg" />
+    <field crmname="birthdate" crmtype="datetime" legacyname="birthdate" />
+    <field crmname="familystatuscode" crmtype="int" legacyname="familystatuscode" />
+    <field crmname="gendercode" crmtype="int" legacyname="gendercode" />
+    <field crmname="findes_orgaoemissor" crmtype="string" legacyname="findes_orgaoemissor" />
+    <field crmname="findes_estadoemissor" crmtype="string" legacyname="findes_estadoemissor" />
+    <field crmname="emailaddress2" crmtype="string" legacyname="emailaddress2" />
+    <field crmname="findes_clientefornecedortotvs" crmtype="int" legacyname="findes_clientefornecedortotvs" />
+    <field crmname="findes_idade" crmtype="int" legacyname="findes_idade" />
+    <field crmname="findes_datacadastrocliente" crmtype="datetime" legacyname="findes_datacadastrocliente" />
+  </entity>
+  <entity crmname="account" crmprimarykey="findes_cnpj" legacyname="Legado_Account" legacyprimarykey="findes_cnpj">
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+    <field crmname="findes_subclasseid" crmtype="lookup" crmlookupentityname="findes_atividadeeconomica" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_subclasseid" />
+    <field crmname="findes_municipiopagamentoid" crmtype="lookup" crmlookupentityname="findes_municipio" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_municipiopagamentoid" />
+    <field crmname="findes_municipioprincipalid" crmtype="lookup" crmlookupentityname="findes_municipio" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_municipioprincipalid" />
+    <field crmname="parentaccountid" crmtype="lookup" crmlookupentityname="account" crmsearchfield="findes_cnpj" ismultilookup="false" legacyname="parentaccountid" />
+    <field crmname="primarycontactid" crmtype="lookup" crmlookupentityname="contact" crmsearchfield="findes_cpf" ismultilookup="false" legacyname="primarycontactid" />
+    <field crmname="findes_coligadaid" crmtype="lookup" crmlookupentityname="findes_coligada" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_coligadaid" />
+    <field crmname="findes_estadopagamentoid" crmtype="lookup" crmlookupentityname="findes_estado" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_estadopagamentoid" />
+    <field crmname="findes_estadoprincipalid" crmtype="lookup" crmlookupentityname="findes_estado" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_estadoprincipalid" />
+    <field crmname="territoryid" crmtype="lookup" crmlookupentityname="territory" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="territoryid"/>
+    <field crmname="findes_sindicatoid" crmtype="lookup" crmlookupentityname="findes_sindicato" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_sindicatoid" />
+    <field crmname="modifiedby" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="modifiedby" />
+    <field crmname="address2_line3" crmtype="string" legacyname="address2_line3" />
+    <field crmname="address1_line3" crmtype="string" legacyname="address1_line3" />
+    <field crmname="address1_postalcode" crmtype="string" legacyname="address1_postalcode" />
+    <field crmname="address2_postalcode" crmtype="string" legacyname="address2_postalcode" />
+    <field crmname="findes_clientefornecedortotvs" crmtype="int" legacyname="findes_clientefornecedortotvs" />
+    <field crmname="findes_clientefornecedor" crmtype="int" legacyname="findes_clientefornecedor" />
+    <field crmname="findes_clientedn" crmtype="bit" legacyname="findes_clientedn" />
+    <field crmname="findes_cnpj" crmtype="string" legacyname="findes_cnpj" />
+    <field crmname="address1_line2" crmtype="string" legacyname="address1_line2" />
+    <field crmname="findes_contribuintefindes" crmtype="int" legacyname="findes_contribuintefindes" />
+    <field crmname="findes_dataatualizacao" crmtype="datetime" legacyname="findes_dataatualizacao" />
+    <field crmname="emailaddress1" crmtype="string" legacyname="emailaddress1" />
+    <field crmname="findes_codigoerp" crmtype="string" legacyname="findes_codigoerp" />
+    <field crmname="findes_inscricaoestadual" crmtype="string" legacyname="findes_inscricaoestadual" />
+    <field crmname="findes_inscricaomunicipal" crmtype="string" legacyname="findes_inscricaomunicipal" />
+    <field crmname="name" crmtype="string" legacyname="name" />
+    <field crmname="address2_line1" crmtype="string" legacyname="address2_line1" />
+    <field crmname="address1_line1" crmtype="string" legacyname="address1_line1" />
+    <field crmname="findes_razaosocial" crmtype="string" legacyname="findes_razaosocial" />
+    <field crmname="findes_situacaofinanceira" crmtype="int" legacyname="findes_situacaofinanceira" />
+    <field crmname="statecode" crmtype="int" legacyname="statecode" />
+    <field crmname="telephone1" crmtype="string" legacyname="telephone1" />
+    <field crmname="findes_tipoindustria" crmtype="int" legacyname="findes_tipoindustria" />
+	<!--
+    <field crmname="findes_tipodecliente" crmtype="int" legacyname="findes_tipodecliente" />
+    <field crmname="customersizecode" crmtype="int" legacyname="customersizecode" />
+    <field crmname="numberofemployees" crmtype="int" legacyname="numberofemployees" />
+	-->
+  </entity>
+  <entity crmname="territory" crmprimarykey="findes_codigo" legacyname="Legado_Regional" legacyprimarykey="findes_codigo">
+    <field crmname="findes_codigo" crmtype="string" legacyname="findes_codigo" />
+    <field crmname="findes_gerenteresponsavelid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="findes_gerenteresponsavelid" />
+    <field crmname="findes_vendedorid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="findes_vendedorid" />
+    <field crmname="territoryid" crmtype="string" legacyname="territoryid" />
+    <field crmname="name" crmtype="string" legacyname="name" />
+    <field crmname="modifiedon" crmtype="datetime" legacyname="findes_dataatualizacao" />
+    <field crmname="ownerid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="ownerid" />
+  </entity>
+  <entity crmname="findes_matriculadocontato" crmprimarykey="findes_idmatricula" legacyname="Legado_MatriculaContato" legacyprimarykey="findes_idmatricula">
+    <field crmname="findes_origemmatricula" crmtype="optionset" legacyname="findes_origemmatricula" />
+    <field crmname="findes_coligadaid" crmtype="lookup" crmlookupentityname="findes_coligada" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_coligadaid" />
+    <field crmname="findes_idmatricula" crmtype="string" legacyname="findes_idmatricula" />
+    <field crmname="findes_solucaoid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="" ismultilookup="false" legacyname="findes_solucaoid" />
+    <field crmname="findes_linhadeatuacaoid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="" ismultilookup="false" legacyname="findes_linhadeatuacaoid" />
+    <field crmname="findes_familiaid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="" ismultilookup="false" legacyname="findes_familiaid" />
+    <field crmname="findes_categoriaid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="" ismultilookup="false" legacyname="findes_categoriaid" />
+    <field crmname="findes_produtoid" crmtype="lookup" crmlookupentityname="product" crmsearchfield="" ismultilookup="false" legacyname="findes_produtoid" />
+    <field crmname="findes_unidadeatendimentoid" crmtype="lookup"  crmlookupentityname="findes_unidadedeatendimento" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_unidadeatendimentoid" />
+    <field crmname="findes_datamatricula" crmtype="datetime" legacyname="findes_datamatricula" />
+    <field crmname="findes_datainicioproposto" crmtype="datetime" legacyname="findes_datainicioproposto" />
+    <field crmname="findes_datatermino" crmtype="datetime" legacyname="findes_datatermino" />
+    <field crmname="findes_situacaomatricula" crmtype="optionset" legacyname="findes_situacaomatricula" />
+    <field crmname="findes_datasituacaomatricula" crmtype="datetime" legacyname="findes_datasituacaomatricula" />
+    <field crmname="findes_responsavelfinanceiroid" crmtype="lookup" crmlookupentityname="contact" crmsearchfield="findes_codigoerp" ismultilookup="false" legacyname="findes_responsavelfinanceiroid" />
+    <field crmname="findes_alunoid" crmtype="lookup" crmlookupentityname="contact" crmsearchfield="findes_codigoerp" ismultilookup="false" legacyname="findes_alunoid" />
+  </entity>
+  <entity crmname="findes_unidadedeatendimento" crmprimarykey="findes_codigo" legacyname="Legado_Filial" legacyprimarykey="findes_codigo">
+    <field crmname="findes_codigo" crmtype="string" legacyname="findes_codigo" />
+    <field crmname="findes_coligadaid" crmtype="lookup" crmlookupentityname="findes_coligada" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_coligadaid" />
+    <field crmname="findes_cnpj" crmtype="string" legacyname="findes_cnpj" />
+    <field crmname="findes_municipioid" crmtype="lookup" crmlookupentityname="findes_municipio" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_municipioid" />
+    <field crmname="findes_inscricaoestadual" crmtype="string" legacyname="findes_inscricaoestadual" />
+    <field crmname="findes_name" crmtype="string" legacyname="findes_name" />
+    <field crmname="findes_regionaldeatendimentoid" crmtype="lookup" crmlookupentityname="territory" crmsearchfield="findes_codigo" ismultilookup="false" legacyname="findes_regionaldeatendimentoid" />
+    <field crmname="findes_gerenteunidadeid" crmtype="lookup" crmlookupentityname="systemuser" crmsearchfield="internalemailaddress" ismultilookup="false" legacyname="findes_gerenteunidadeid" />
+  </entity>
+</fromto>
